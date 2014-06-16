@@ -82,7 +82,7 @@
     InventoryTVC = [[IDAInventoryListTVC alloc] initWithStyle:UITableViewStylePlain];
     
     InventoryTVC.roomTag = sender.titleLabel.text;
-    NSLog(@"room tag %@",sender.titleLabel.text);
+//    NSLog(@"room tag %@",sender.titleLabel.text);
     [[IDASingleton sharedCollection] currentBox][@"room"] = sender.titleLabel.text;
 
     [self.navigationController pushViewController:InventoryTVC animated:YES];

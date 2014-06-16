@@ -56,13 +56,13 @@
 {
     self.navigationController.navigationBarHidden = NO;
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
-    [self.tableView setContentInset:UIEdgeInsetsMake(100,0,0,0)];
-    self.tableView.rowHeight = 35;
+    [self.tableView setContentInset:UIEdgeInsetsMake(80,0,0,0)];
+    self.tableView.rowHeight = 30;
     
-    UILabel *roomLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, -80, 320, 50)];
+    UILabel *roomLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, -50, 320, 50)];
     roomLabel.backgroundColor = [UIColor clearColor];
     roomLabel.textAlignment = NSTextAlignmentCenter;
-    roomLabel.font = [UIFont fontWithName:@"DamascusMedium" size:40];
+    roomLabel.font = [UIFont fontWithName:@"DamascusMedium" size:34];
     roomLabel.textColor = [UIColor whiteColor];
     roomLabel.text = [NSString stringWithFormat:@"%@", self.roomTag];
     [self.view addSubview:roomLabel];
@@ -116,12 +116,12 @@
     int boxID = [self getUniqueBoxID:10001 to:99999];
     
     NSString *strBoxID = [NSString stringWithFormat:@"%d",boxID];
-    NSLog(@"%@",strBoxID);
+//    NSLog(@"%@",strBoxID);
     [[IDASingleton sharedCollection] currentBox][@"id"] = strBoxID;
     
     [[IDASingleton sharedCollection] saveData];
     
-    NSLog(@"what is in currentBox %@", [[IDASingleton sharedCollection] currentBox]);
+//    NSLog(@"what is in currentBox %@", [[IDASingleton sharedCollection] currentBox]);
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Your box number is" message:[NSString stringWithFormat:@"%@", strBoxID] delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
@@ -155,8 +155,7 @@
     cell.textLabel.text = [[IDASingleton sharedCollection] currentBox][@"items"][indexPath.row];
     cell.backgroundColor = [UIColor clearColor];
     cell.contentView.backgroundColor = [UIColor clearColor];
-//    cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    cell.textLabel.font = [UIFont fontWithName:@"AmericanTypewriter-CondensedLight" size:32];
+    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:28];
     cell.textLabel.textColor = [UIColor whiteColor];
 
     return cell;

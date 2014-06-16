@@ -289,7 +289,7 @@
 				ORGANIZATIONNAME = "Austen Johnson";
 				TargetAttributes = {
 					C8B18E83192F817400546074 = {
-						DevelopmentTeam = YUM7RTQH92;
+						DevelopmentTeam = E8R3JHTUTC;
 					};
 					C8B18E9E192F817400546074 = {
 						TestTargetID = C8B18E83192F817400546074;
@@ -505,6 +505,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -513,6 +514,7 @@
 				GCC_PREFIX_HEADER = "Inventory Detail/Inventory Detail-Prefix.pch";
 				INFOPLIST_FILE = "Inventory Detail/Inventory Detail-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -523,6 +525,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -531,6 +534,7 @@
 				GCC_PREFIX_HEADER = "Inventory Detail/Inventory Detail-Prefix.pch";
 				INFOPLIST_FILE = "Inventory Detail/Inventory Detail-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

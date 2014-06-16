@@ -70,8 +70,8 @@
     NSLog(@"%@",[[IDASingleton sharedCollection] allBoxItems]);
     
     self.navigationItem.hidesBackButton = YES;
-    [self.tableView setContentInset:UIEdgeInsetsMake(100,0,0,0)];
-    self.tableView.rowHeight = 35;
+    [self.tableView setContentInset:UIEdgeInsetsMake(80,0,0,0)];
+    self.tableView.rowHeight = 30;
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
 
     searchFile = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 220, 30)];
@@ -124,7 +124,7 @@
         [alert show];
         
         searchFile.text = @"";
-        NSLog(@"There is no box to add your item to");
+//        NSLog(@"There is no box to add your item to");
     }
 }
 
@@ -144,8 +144,8 @@
         roomLabel.text = @"";
         for (NSMutableDictionary * box in [[IDASingleton sharedCollection] allBoxItems])
         {
-            NSLog(@"%@",box[@"id"]);
-            NSLog(@"%@",searchFile.text);
+//            NSLog(@"%@",box[@"id"]);
+//            NSLog(@"%@",searchFile.text);
             
             if ([box[@"id"] isEqualToString:searchFile.text])
             {
@@ -168,8 +168,8 @@ else
         {
             for (NSString * item in box[@"items"])
             {
-                NSLog(@"%@",item);
-                NSLog(@"%@",searchFile.text);
+//                NSLog(@"%@",item);
+//                NSLog(@"%@",searchFile.text);
                 
                 if ([item isEqualToString:searchFile.text])
                 {
@@ -177,7 +177,7 @@ else
                     
                     [[IDASingleton sharedCollection] setSelectedBox:box];
 
-                    NSLog(@"searched items %@", searchedItems);
+//                    NSLog(@"searched items %@", searchedItems);
                     
                     [self.tableView reloadData];
                     
@@ -203,10 +203,10 @@ else
         [alert show];
         searchFile.text = @"";
     } else {
-        roomLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, -80, 320, 50)];
+        roomLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, -50, 320, 50)];
         roomLabel.backgroundColor = [UIColor clearColor];
         roomLabel.textAlignment = NSTextAlignmentCenter;
-        roomLabel.font = [UIFont fontWithName:@"DamascusMedium" size:40];
+        roomLabel.font = [UIFont fontWithName:@"DamascusMedium" size:34];
         roomLabel.textColor = [UIColor whiteColor];
         roomLabel.text = [NSString stringWithFormat:@"%@",[[IDASingleton sharedCollection] selectedBox][@"room"]];
         [self.view addSubview:roomLabel];
@@ -226,14 +226,15 @@ else
 {
     if (buttonIndex == [alertView cancelButtonIndex])
     {
-        NSLog(@"Yes");
+//        NSLog(@"Yes");
         [[IDASingleton sharedCollection] removeBoxItem:[[IDASingleton sharedCollection] selectedBox]];
         
         [self.tableView reloadData];
+        roomLabel.text = @"";
     }
     else
     {
-        NSLog(@"No");
+//        NSLog(@"No");
     }
 }
 
@@ -262,7 +263,7 @@ else
     cell.textLabel.text = [[IDASingleton sharedCollection] selectedBox][@"items"][indexPath.row];
     cell.contentView.backgroundColor = [UIColor clearColor];
     cell.backgroundColor = [UIColor clearColor];
-    cell.textLabel.font = [UIFont fontWithName:@"AmericanTypewriter-CondensedLight" size:32];
+    cell.textLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:28];
     cell.textLabel.textColor = [UIColor whiteColor];
 
     return cell;
@@ -277,7 +278,7 @@ else
 {
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
-        [[[IDASingleton sharedCollection] currentBox][@"items"] removeObjectAtIndex:indexPath.row];
+        [[[IDASingleton sharedCollection] selectedBox][@"items"] removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
         [self.tableView reloadData];
     }

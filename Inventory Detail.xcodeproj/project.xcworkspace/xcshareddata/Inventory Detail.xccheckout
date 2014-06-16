@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>08C6A1BE-2DD3-44AB-BF47-A42A5272866C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Inventory Detail</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5AB88569-F725-43B1-A24B-CF6DE3B6D8DF</key>
+		<string>https://github.com/ajohnson21/Box-Tagger.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Inventory Detail.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5AB88569-F725-43B1-A24B-CF6DE3B6D8DF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ajohnson21/Box-Tagger.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5AB88569-F725-43B1-A24B-CF6DE3B6D8DF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5AB88569-F725-43B1-A24B-CF6DE3B6D8DF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Inventory Detail</string>
+		</dict>
+	</array>
+</dict>
+</plist>

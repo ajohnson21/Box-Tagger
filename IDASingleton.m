@@ -56,7 +56,7 @@
 
 - (void)removeBoxItem:(NSMutableDictionary *)box
 {
-    NSLog(@"%@", box);
+//    NSLog(@"%@", box);
     [self.boxItems removeObjectIdenticalTo:box];
     selectedBox = nil;
     
@@ -98,7 +98,7 @@
     {
         self.boxItems = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
     }
-    NSLog(@"is this stuff loading %@", path);
+//    NSLog(@"is this stuff loading %@", path);
 }
 
 - (NSMutableDictionary *)newBox
