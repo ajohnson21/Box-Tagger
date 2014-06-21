@@ -54,7 +54,7 @@
         for (int c = 0; c < cols; c++)
         {
             float squareX = ((width) * c) + 16;
-            float squareY = ((height) * r) + 128;
+            float squareY = ((height) * r) + 96;
             
             roomName = [[UIButton alloc] initWithFrame:CGRectMake(squareX + 8, squareY + 8, width - 16, height - 16)];
             roomName.backgroundColor = [UIColor lightGrayColor];
@@ -74,13 +74,14 @@
 {
     self.navigationController.navigationBarHidden = NO;
     self.navigationController.toolbarHidden = YES;
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.toolbar.translucent = NO;
 }
 
 - (void)pushBeginInventory:(UIButton *)sender
 {
     newBox = [[IDASingleton sharedCollection] newBox];
     InventoryTVC = [[IDAInventoryListTVC alloc] initWithStyle:UITableViewStylePlain];
-    
     InventoryTVC.roomTag = sender.titleLabel.text;
 //    NSLog(@"room tag %@",sender.titleLabel.text);
     [[IDASingleton sharedCollection] currentBox][@"room"] = sender.titleLabel.text;

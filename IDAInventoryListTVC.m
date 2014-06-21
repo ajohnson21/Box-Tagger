@@ -56,8 +56,10 @@
 {
     self.navigationController.navigationBarHidden = NO;
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.toolbar.translucent = NO;
     [self.tableView setContentInset:UIEdgeInsetsMake(80,0,0,0)];
-    self.tableView.rowHeight = 30;
+    self.tableView.rowHeight = 35;
     
     UILabel *roomLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, -50, 320, 50)];
     roomLabel.backgroundColor = [UIColor clearColor];

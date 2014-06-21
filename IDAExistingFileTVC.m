@@ -57,6 +57,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBarHidden = NO;
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.toolbar.translucent = NO;
     
     // clears out empty boxes
     
@@ -71,7 +73,7 @@
     
     self.navigationItem.hidesBackButton = YES;
     [self.tableView setContentInset:UIEdgeInsetsMake(80,0,0,0)];
-    self.tableView.rowHeight = 30;
+    self.tableView.rowHeight = 35;
     self.tableView.allowsMultipleSelectionDuringEditing = NO;
 
     searchFile = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 220, 30)];
